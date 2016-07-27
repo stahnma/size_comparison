@@ -2,10 +2,14 @@
 
 require 'sqlite3'
 
+# Threashold is in % delta.
 THREASHOLD=20
+# Compare version 1 and version 2
+VERSION1="1.0.0"
+VERSION2="1.5.3"
 
 db = SQLite3::Database.new( "test.db" )
-whereclause= " where path like '%lib%' or path like '%bin%' and (version = '1.5.2' or version = '1.5.3') order by path"
+whereclause= " where path like '%lib%' or path like '%bin%' and (version = '#{VERSION1}' or version = '#{VERSION2}') order by path"
 
 # Get unique filenames to check
 sql = "select distinct(path) from filesizes " + whereclause
@@ -19,7 +23,7 @@ min = {}
 max = {}
 filelist.each do |file|
   next if (file !~ /\.a$/  and file !~/\.so$/)
-  sql = "select filename, path, size, version from filesizes where path='#{file}' and (version = '1.5.2' or version = '1.5.3') order by path"
+  sql = "select filename, path, size, version from filesizes where path='#{file}' and (version = '#{VERSION1}' or version = '#{VERSION2}') order by path"
   min[:size]=nil
   min[:version]=nil
   max[:size]=0

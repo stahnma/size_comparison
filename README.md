@@ -16,6 +16,6 @@ That loads up an SQLite3 database. Then you run `query.rb` to see what's happeni
 # Example output
 
 
-  /opt/puppetlabs/puppet/lib/libaugeas.a has min size of 542470 at version 1.5.2 and max of 2493182 at version 1.5.3 for more than a 20% change.
-  /opt/puppetlabs/puppet/lib/libfa.a has min size of 120488 at version 1.5.2 and max of 786480 at version 1.5.3 for more than a 20% change.
-  /opt/puppetlabs/puppet/lib/libruby-static.a has min size of 4971304 at version 1.5.2 and max of 47253390 at version 1.5.3 for more than a 20% change.
+    /opt/puppetlabs/puppet/lib/libaugeas.a has min size of 542470 at version 1.5.2 and max of 2493182 at version 1.5.3 for more than a 20% change.
+    /opt/puppetlabs/puppet/lib/libfa.a has min size of 120488 at version 1.5.2 and max of 786480 at version 1.5.3 for more than a 20% change.
+    /opt/puppetlabs/puppet/lib/libruby-static.a has min size of 4971304 at version 1.5.2 and max of 47253390 at version 1.5.3 for more than a 20% change.
